@@ -3,23 +3,24 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hello Ionic</ion-title>
+    <ion-title>Stupid Tuba Logs</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <h3>Never be caught unprepared against Tuba again!</h3>
 
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
+    This application will help you keep track of all the 
+    stupid things you hear Tuba say. 
   </p>
   <p>
-    Follow along on the tutorial section of the Ionic docs!
+    Click the button to start your first log!
   </p>
   <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    <button ion-button color="primary" (click)=gotoDetails()>Create Log</button>
   </p>
 
 </ion-content>

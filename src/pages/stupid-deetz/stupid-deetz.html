@@ -1,0 +1,64 @@
+<!--
+  Generated template for the StupidDeetzPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Details Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3>Input the details of the encounter below: </h3>
+
+  <div>
+    <form (ngSubmit)="confirm()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-label color="secondary" clear stacked>Name</ion-label>
+              <ion-input type="text" placeholder="What should we call this?" name="title" [(ngModel)]="title" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Details</ion-label>
+              <ion-input type="text" placeholder="Enter the details of the encounter. Don't hold back." name="details"
+                [(ngModel)]="details"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Time</ion-label>
+              <ion-input type="text" placeholder="When did she?" name="date" [(ngModel)]="date"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label color="primary" stacked>Priority</ion-label>
+              <ion-input type="text" placeholder="Big stupid, medium stupid or small stupid?" name="priority"
+                [(ngModel)]="priority"></ion-input>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit">Save</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+
+
+</ion-content>

@@ -11,6 +11,7 @@ import { ItemDetailsPage } from '../item-details/item-details';
 export class ListPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
+  myInput: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
@@ -28,7 +29,16 @@ export class ListPage {
 
   itemTapped(event, item) {
     this.navCtrl.push(ItemDetailsPage, {
-      item: item
+      item: item   
     });
+  }
+
+  onInput(event){
+    console.log(this.myInput);
+    
+  }
+
+  onCancel(event){
+
   }
 }
