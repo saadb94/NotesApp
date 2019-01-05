@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the StupidDeetzPage page.
@@ -14,15 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'stupid-deetz.html',
 })
 export class StupidDeetzPage {
-  title: any;
-  details: any;
-  date: any;
-  priority: any;
+  title: string;
+  details: string;
+  date: string;
+  tags: string;
   note: any;
   list: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private toastctrl:ToastController) {
+
   }
 
   ionViewDidLoad() {
@@ -33,15 +34,31 @@ export class StupidDeetzPage {
     console.log(this.title);
     console.log(this.details);
     console.log(this.date);
-    console.log(this.priority);
-    alert("Done! Added to the list.")
+    console.log(this.tags);
 
     this.note = {
       title: this.title,
       details: this.details,
       date: this.date,
-      priority: this.priority
+      tags: this.tags
     }
+
+    let toast = this.toastctrl.create({
+      message: "Note added.",
+      duration: 3000,
+      position: 'bottom'
+    });
+
+    toast.onDidDismiss(()=>{
+      console.log('dismissed toast');
+    });
+
+    console.log("below is the note");
+    console.log(this.note);
+    console.log(this.note.title);
+    
+    toast.present();
+    //alert("Done! Added to the list.")
   }
 
 }

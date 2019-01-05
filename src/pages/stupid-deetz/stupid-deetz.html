@@ -27,26 +27,25 @@
 
             <ion-item>
               <ion-label color="secondary" clear stacked>Name</ion-label>
-              <ion-input type="text" placeholder="What should we call this?" name="title" [(ngModel)]="title" required></ion-input>
+              <ion-input type="text" placeholder="What should this note be called?" name="title" [(ngModel)]="title"
+                required></ion-input>
             </ion-item>
 
             <ion-item>
               <ion-label color="primary" stacked>Details</ion-label>
-              <ion-input type="text" placeholder="Enter the details of the encounter. Don't hold back." name="details"
-                [(ngModel)]="details"></ion-input>
+              <ion-input type="text" placeholder="Enter any details you have." name="details" [(ngModel)]="details"></ion-input>
             </ion-item>
 
             <ion-item>
               <ion-label color="primary" stacked>Time</ion-label>
-              <ion-input type="text" placeholder="When did she?" name="date" [(ngModel)]="date"></ion-input>
+              <ion-input type="text" placeholder="Enter the time and date. In any format." name="date" [(ngModel)]="date"></ion-input>
             </ion-item>
 
             <ion-item>
-              <ion-label color="primary" stacked>Priority</ion-label>
-              <ion-input type="text" placeholder="Big stupid, medium stupid or small stupid?" name="priority"
-                [(ngModel)]="priority"></ion-input>
+              <ion-label color="primary" stacked>Tags</ion-label>
+              <ion-input type="text" placeholder="Enter any tags. For example: bills, taxes etc." name="tags"
+                [(ngModel)]="tags"></ion-input>
             </ion-item>
-
           </ion-list>
         </ion-col>
       </ion-row>
